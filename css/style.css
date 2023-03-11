@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 767px) {
+    body {
+        grid-template-columns: auto;
+    }
+}
+.left {
+    background: url("../imgs/bk.png") no-repeat;
+    background-size: 100% 101%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left img {
+    max-width: 50%;
+}
+@media (max-width: 767px) {
+    .left {
+        display: none;
+    }
+}
+.right {
+    color: #696969;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .container {
+    width: 400px;
+    text-align: center;
+}
+@media (max-width: 767px) {
+    .right .container {
+        width: 350px;
+    }
+}
+.right h1 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+@media (max-width: 767px) {
+    .right h1 {
+        font-size: 2rem;
+    }
+}
+.right h1::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    background-color: #843bc7;
+}
+.right p {
+    margin: 40px 0;
+}
+.right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.right form .inp {
+    width: 100%;
+    position: relative;
+}
+.right form .inp input {
+    width: 100%;
+    padding: 14px 64px;
+    border-radius: 25px;
+    background-color: #e6e6e6;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+.right form .inp:focus-within > i {
+    color: #843bc7;
+}
+.right form .inp i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 32px;
+}
+.right a {
+    background-image: linear-gradient(to right, #8b33c5, #15a0e1);
+    width: fit-content;
+    padding: 14px 64px;
+    border-radius: 25px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 auto;
+    transition: .3s;
+}
+.right a:hover {
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+}
